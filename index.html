@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<body>
+   
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">EditMe</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+</header> 
+    
+    
+    
+        <div class="intro">
+          <h1>PDF EDITOR</h1>
+          <p>A Pdf Editing Platform</p>
+          <button>Learn More</button>
+        </div>
+         <div class="achievements">
+          <div class="work">
+           
+            <p class="work-heading">MERGER</p>
+            <p class="work-text">Combine PDFs in the order you want with the easiest PDF merger available.</p>
+          </div>
+          <div class="work">
+            
+            <p class="work-heading">COMPRESS</p>
+            <p class="work-text">Reduce file size while optimizing for maximal PDF quality.</p>
+          </div>
+          <div class="work">
+            
+        <a href="pdf.html">  <p class="work-heading">IMG TO PDF</p></a>
+            <p class="work-text">Use IMG to PDF converter to turn JPGs and other image file formats into PDFs.</p>
+
+            </p>
+          </div>
+        </div>
+        <div class="about-me">
+          <div class="about-me-text">
+            <h2>About Me</h2>
+            <p>EditMe is your number 1 web app for editing PDF with ease. Enjoy all the tools you need to work efficiently with your digital documents while keeping your data safe and secure.</p>
+          </div>
+          <img src="about.png" alt="me">
+        </div> 
+        <!-- <footer class="footer">
+            <div class="copy">&copy; 2022 Developer</div>
+            <div class="bottom-links">
+              <div class="links">
+                <span>More Info</span>
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">Support</a>
+                <a href="#">Contact</a>
+              </div>
+              <div class="links">
+                <span>Social Links</span>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </footer>
+
+       -->
+       <section class="footer">
+        <div class="social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+  
+        <ul class="list">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Terms</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+        </ul>
+        <p class="copyright">Future Coders @ 2022</p>
+      </section>
+
+    
+    <script src="script.js"></script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
+
+  
+
+  </script>
+</body>
+</html>

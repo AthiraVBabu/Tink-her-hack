@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img to pdf</title>
+
+    <!-- pdf-lib link -->
+    <script src="https://unpkg.com/pdf-lib"></script>
+
+    <!-- download js link -->
+    <script type="text/javascript" src="https://unpkg.com/downloadjs@1.4.7/download.js"></script>
+
+    <!-- font awesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="/pdf.css">
+</head>
+<body>
+    <!-- nav bar -->
+    <div class="nav">
+        <span class="logo" style=" font-family: 'Sriracha', cursive;color:darkblue;">
+          EditMe
+        </span>
+        <div>
+            <button onClick={calcPdfSize(this)} id="convertBtn" convertBtn={convertBtn}>SAVE AS PDF</button>
+            <button onClick={embedImages()} id="download">DOWNLOAD</button>
+            <!-- <button id="upload-msg" type="button" disabled="true">UPLOAD FILES</button> -->
+        </div>
+    </div>
+
+<!-- input page -->
+<div class="input-page" id="input-page">
+    <div class="choose-file">
+        <div class="add-more-files">
+            <div class="inp-container">
+                <input type="file"
+                 id="upload-file"
+                 onChange={encodeImageFileAsURL(this)} multiple accept="image/*"/>
+                 <h4 class="drop">
+                    DRAG  & DROP OR 
+                 </h4>
+                 <p>
+                <i class="fa fa-file-image-o fa-4x img-icon"></i>
+
+                 </p>
+                 <label htmlFor="upload-file"id="custom-file">CHOOSE FILES</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- pdf page -->
+<div class="pdf-page" id="pdf-page">
+    <div class="create-pdf" id="create-pdf">
+        <!-- this part of code is just to show the pdf structure  -->
+        <div class="file-item">
+            <div class="modify">
+                <button class="delete-btn">
+                    <i class="fa fa-trash">
+
+                    </i>
+                </button>
+            </div>
+            <div class="img-container">
+                <img src="chocolate.jpg" alt="img" id="img">
+            </div>
+            <p id="img-name">img-name</p>
+                <div class="add-more-file">
+                    <div class="inp-cont">
+                        <input type="file" id="inp" multiple accept ="image/">
+                        <p><i class="fa fa-plus"></i></p>
+                        <label for="inp">Add Files</label>
+                    </div>
+                </div>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="/pdf.js"></script>
+
+
+</body>
+</html>
